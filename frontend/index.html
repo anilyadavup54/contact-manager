@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacts Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">Contacts Manager</div>
+      </div>
+
+      <div class="layout">
+        <div class="card">
+          <h3>Add / Edit Contact</h3>
+          <form id="contact-form">
+            <input type="hidden" id="contact-id" />
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" placeholder="Enter name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="Enter email" required />
+            </div>
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input id="phone" placeholder="Enter phone" required />
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn" type="submit">Save</button>
+              <button class="btn ghost" type="button" id="reset-btn">Reset</button>
+            </div>
+          </form>
+          <div id="form-error"></div>
+          <div id="form-success"></div>
+        </div>
+
+        <div>
+          <div class="card">
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
+              <input id="search" placeholder="Search by name or email" style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)" />
+              <button class="btn secondary" id="search-btn">Search</button>
+            </div>
+
+            <div class="list" id="contacts-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
